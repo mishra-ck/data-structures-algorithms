@@ -1,5 +1,7 @@
 Data Structures and Algorithms
 ---
+A reference for DSA implementations in Java language.
+
 ## Overview of repository
 ### Linear Data Structures:-
 ```
