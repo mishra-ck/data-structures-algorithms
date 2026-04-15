@@ -1,3 +1,20 @@
-# Practice-Problem-Solving
+Data Structures and Algorithms
+---
+## Overview of repository
+### Linear Data Structures:-
+```
+```
+### Non-Linear Data Structures:-
+```
+✅ Tree
+    |- Binary Tree
+    |  |- Binary Search Tree
+    |  |- AVL Tree
+    |  |- Red-Black Tree
+    |  |- Heap
+    |- Trie(Prefix Tree)
+    |- B Tree / B+ Tree
+    |- Segment Tree
 
-Contains Practice Problems related to Data Structures, Problem Solving
+```
+
