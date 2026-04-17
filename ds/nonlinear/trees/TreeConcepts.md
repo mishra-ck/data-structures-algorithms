@@ -17,3 +17,17 @@ Unlike arrays or linked-list, tree represent parent-child relationships.
 ✅ Sibling: Nodes sharing the same parent
 ```
 ---
+### Type of Trees
+
+1. [N-ary Tree](#n-ary)
+2. [Binary Tree ](#binary)
+3. [Binary Search Tree](#binary-search)
+4. [AVL tree](#avl)
+5. [B/B+ Tree](#b/b++)
+6. [Red-Black Tree](red-black)
+7. [Heap](#heap)
+8. [Segment Tree](#segment)
+9. [Fenwick Tree](#fenwick)
+10. [Tries](#trie)
+
+---
