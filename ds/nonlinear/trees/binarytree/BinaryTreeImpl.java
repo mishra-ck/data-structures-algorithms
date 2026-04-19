@@ -28,16 +28,16 @@ public class BinaryTreeImpl<T> implements Comparable<T>{
     /**  Inorder Traversal : Left -> Root -> Right - gives sorted output */
     public List<T> inOrder(){
         List<T> result = new ArrayList<>();
-        inorderRecursiveHelper(root,result);  // recursive way
+        inorderRecursive(root,result);  // recursive way
         inorderIterative(root);  // iterative way
         return result;
     }
     // Recursive approach
-    private void inorderRecursiveHelper(BinaryTreeNode<T> node, List<T> result) {
+    private void inorderRecursive(BinaryTreeNode<T> node, List<T> result) {
         if(node == null) return;
-        inorderRecursiveHelper(node.getLeft(),result);
+        inorderRecursive(node.getLeft(),result);
         result.add(node.getValue()); // add current node value in list
-        inorderRecursiveHelper(node.getRight(),result);
+        inorderRecursive(node.getRight(),result);
     }
     // Iterative approach
     private void inorderIterative(BinaryTreeNode<T> node){
@@ -62,15 +62,15 @@ public class BinaryTreeImpl<T> implements Comparable<T>{
     /** Preorder Traversal : Root -> Left -> Right  - used for tree copying */
     public List<T> preOrder(){
         List<T> result = new ArrayList<>();
-        preOrderHelper(root, result);
+        preOrderRecursive(root, result);
         return result;
     }
     // Recursive Approach
-    private void preOrderHelper(BinaryTreeNode<T> node, List<T> result) {
+    private void preOrderRecursive(BinaryTreeNode<T> node, List<T> result) {
         if(node == null) return;
         result.add(node.getValue());
-        preOrderHelper(node.getLeft(),result);
-        preOrderHelper(node.getRight(),result);
+        preOrderRecursive(node.getLeft(),result);
+        preOrderRecursive(node.getRight(),result);
     }
     // Iterative Approach
     public void preOrderIterative(BinaryTreeNode<T> node){
