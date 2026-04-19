@@ -94,6 +94,21 @@ public class BinaryTreeImpl<T> implements Comparable<T>{
         }
     }
 
+    /**  PostOrder traversal : Left -> Right -> Root  - Used for tree deletion  */
+    public List<T> postOrder(){
+        List<T> result = new ArrayList<>();
+        postOrderRecursive(root, result);
+        return result;
+    }
+    // Recursive approach
+    private void postOrderRecursive( BinaryTreeNode<T> node,List<T> result) {
+        if(node == null) return;
+        postOrderRecursive(node.getLeft(), result);
+        postOrderRecursive(node.getRight(), result);
+        result.add(node.getValue());
+    }
+
+
     @Override
     public int compareTo(T o) {
         return 0;
