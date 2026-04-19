@@ -1,5 +1,6 @@
 package ds.nonlinear.trees.binarytree;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -28,7 +29,7 @@ public class BinaryTreeImpl<T> implements Comparable<T>{
     public List<T> inOrder(){
         List<T> result = new ArrayList<>();
         inorderRecursiveHelper(root,result);  // recursive way
-        inorderIterativeHelper(root);  // iterative way
+        inorderIterative(root);  // iterative way
         return result;
     }
     // Recursive approach
@@ -39,7 +40,7 @@ public class BinaryTreeImpl<T> implements Comparable<T>{
         inorderRecursiveHelper(node.getRight(),result);
     }
     // Iterative approach
-    private void inorderIterativeHelper(BinaryTreeNode<T> node){
+    private void inorderIterative(BinaryTreeNode<T> node){
         if(node == null) return;
         Stack<BinaryTreeNode<T>> stack = new Stack<>();
         BinaryTreeNode<T> current = node;
@@ -70,6 +71,27 @@ public class BinaryTreeImpl<T> implements Comparable<T>{
         result.add(node.getValue());
         preOrderHelper(node.getLeft(),result);
         preOrderHelper(node.getRight(),result);
+    }
+    // Iterative Approach
+    public void preOrderIterative(BinaryTreeNode<T> node){
+        if(node == null) return ;
+
+        var stack = new ArrayDeque<BinaryTreeNode<T>>();
+        stack.push(node);
+
+        while(!stack.isEmpty()){
+            var current = stack.pop();
+            System.out.println("Current Value : "+current.getValue());
+
+            // push the right child first
+            if(current.getRight() != null){
+                stack.push(current.getRight());
+            }
+            // push left child second
+            if(current.getLeft() != null){
+                stack.push(current.getLeft());
+            }
+        }
     }
 
     @Override
