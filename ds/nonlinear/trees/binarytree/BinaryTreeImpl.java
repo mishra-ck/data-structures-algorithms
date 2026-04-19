@@ -63,6 +63,7 @@ public class BinaryTreeImpl<T> implements Comparable<T>{
     public List<T> preOrder(){
         List<T> result = new ArrayList<>();
         preOrderRecursive(root, result);
+        preOrderIterative(root,result);
         return result;
     }
     // Recursive Approach
@@ -73,7 +74,7 @@ public class BinaryTreeImpl<T> implements Comparable<T>{
         preOrderRecursive(node.getRight(),result);
     }
     // Iterative Approach
-    public void preOrderIterative(BinaryTreeNode<T> node){
+    private void preOrderIterative(BinaryTreeNode<T> node, List<T> result){
         if(node == null) return ;
 
         var stack = new ArrayDeque<BinaryTreeNode<T>>();
@@ -107,7 +108,25 @@ public class BinaryTreeImpl<T> implements Comparable<T>{
         postOrderRecursive(node.getRight(), result);
         result.add(node.getValue());
     }
+    // Iterative approach
+    private void postOrderIterative(BinaryTreeNode<T> node, List<T> result){
+        if(node == null) return;
 
+        var stack = new ArrayDeque<BinaryTreeNode<T>>();
+        stack.push(node);
+
+        while(!stack.isEmpty()){
+            var current = stack.pop();
+            result.add(current.getValue());
+            // to get root-left-right, push left then right
+            if(current.getLeft() != null){
+                stack.push(current.getLeft());
+            }
+            if(current.getRight() != null){
+                stack.push(current.getRight());
+            }
+        }
+    }
 
     @Override
     public int compareTo(T o) {
