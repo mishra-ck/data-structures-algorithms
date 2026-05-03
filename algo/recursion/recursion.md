@@ -1,4 +1,4 @@
-Recursion
+RECURSION
 ---
 ---
 ### What is Recursion ?
@@ -72,4 +72,8 @@ Iteration :-
 6. DP and Divide and Conquer Algorithms
 7. Towers of Hanoi
 8. Backtracking algorithms.
+---
+### Complexity Analysis
+Time Complexity: O(2^n) each increment in disks doubles the work.
+Space Complexity: O(n) due to the recursion stack depth.
 ---
