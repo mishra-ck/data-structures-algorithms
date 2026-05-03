@@ -20,4 +20,3 @@ the particular problem is unsolvable.
 6. Graph colouring problem
 
 ---
-
