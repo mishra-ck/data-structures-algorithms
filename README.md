@@ -3,8 +3,28 @@ Data Structures and Algorithms
 A reference for DSA implementations in Java language.
 
 ## Overview of repository
+
+### Algorithms:-
+```
+✅ Recursion
+✅ Backtracking
+✅ Hashing 
+✅ Searching
+✅ Sorting
+✅ String
+✅ Greedy
+✅ Divide and Conquer
+✅ Dynamic Programming
+✅ Miscellaneous
+
+```
 ### Linear Data Structures:-
 ```
+✅ Arrays
+✅ LinkedList
+✅ Stack
+✅ Queue
+
 ```
 ### Non-Linear Data Structures:-
 ```
@@ -17,6 +37,8 @@ A reference for DSA implementations in Java language.
     |- Trie(Prefix Tree)
     |- B Tree / B+ Tree
     |- Segment Tree
+
+✅ Graph
 
 ```
 
