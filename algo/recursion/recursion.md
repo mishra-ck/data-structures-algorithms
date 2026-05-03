@@ -44,6 +44,6 @@ class Factorial{
 }
 ```
 ### Memory Visualization
-
+![factorial.png](https://github.com/mishra-ck/data-structures-algorithms/blob/main/algo/recursion/factorial.png)
 
 ---
