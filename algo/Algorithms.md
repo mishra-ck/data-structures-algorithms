@@ -1,7 +1,7 @@
 ALGORITHMS
 ---
-1. [Recursion](#recursion)
-2. [Backtracking](#backtracking)
+1. [Recursion](https://github.com/mishra-ck/data-structures-algorithms/tree/main/algo/recursion)
+2. [Backtracking](https://github.com/mishra-ck/data-structures-algorithms/tree/main/algo/backtracking)
 3. [Hashing](#hashing)
 4. [Searching](#searching)
 5. [Sorting](#sorting)
