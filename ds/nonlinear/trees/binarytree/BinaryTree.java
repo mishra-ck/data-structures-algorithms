@@ -30,6 +30,7 @@ public class BinaryTree<T> implements Comparable<T>{
         List<T> result = new ArrayList<>();
         inorderRecursive(root,result);  // recursive way
         inorderIterative(root);  // iterative way
+        System.out.println("Inorder Traversal : Left -> Root -> Right");
         return result;
     }
     // Recursive approach
@@ -64,6 +65,7 @@ public class BinaryTree<T> implements Comparable<T>{
         List<T> result = new ArrayList<>();
         preOrderRecursive(root, result);
         preOrderIterative(root,result);
+        System.out.println("Preorder Traversal : Root -> Left -> Right ");
         return result;
     }
     // Recursive Approach
@@ -82,7 +84,7 @@ public class BinaryTree<T> implements Comparable<T>{
 
         while(!stack.isEmpty()){
             var current = stack.pop();
-            System.out.println("Current Value : "+current.getValue());
+//            System.out.println("Current Value : "+current.getValue());
 
             // push the right child first
             if(current.getRight() != null){
@@ -99,6 +101,7 @@ public class BinaryTree<T> implements Comparable<T>{
     public List<T> postOrder(){
         List<T> result = new ArrayList<>();
         postOrderRecursive(root, result);
+        System.out.println("PostOrder traversal : Left -> Right -> Root ");
         return result;
     }
     // Recursive approach
