@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class BinaryTreeImpl<T> implements Comparable<T>{
+public class BinaryTree<T> implements Comparable<T>{
     protected BinaryTreeNode<T> root;
     protected int size;
-    public BinaryTreeImpl() {
+    public BinaryTree() {
             this.root = null;
             this.size = 0;
     }

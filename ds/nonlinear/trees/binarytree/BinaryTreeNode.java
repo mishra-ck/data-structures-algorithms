@@ -15,6 +15,7 @@ public class BinaryTreeNode<T> {
         this.left = left;
         this.right = right;
     }
+
     public T getValue(){ return value;}
     public void setValue(T value){ this.value = value; }
 
