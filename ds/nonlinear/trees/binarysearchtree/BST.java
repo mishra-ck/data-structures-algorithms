@@ -36,5 +36,30 @@ public class BST<T extends Comparable> extends BinaryTree {
         }
         return searchHelper(node.getRight(),value);
     }
+    /** --------- DELETE : O(h)  ---------- */
+    public void delete(T value){
+        root = deleteHelper(root,value);
+        size-- ;
+    }
+    private BinaryTreeNode<T> deleteHelper(BinaryTreeNode node, T value) {
+        if(node == null) return null ;
+        int compare = value.compareTo(value);
+
+        if(compare < 0){
+            node.setLeft(deleteHelper(node.getLeft(),value));
+        } else if (compare > 0) {
+            node.setRight(deleteHelper(node.getRight(),value));
+        }else{
+            /** Node to be deleted is found */
+
+            // CASE 1 : No left child
+            if(node.getLeft() == null) return node.getRight();
+            // CASE 2 : No right child
+            if(node.getRight() == null) return  node.getLeft();
+            // CASE 3 : Two children - replace with inorder successor
+            /*TODO*/
+        }
+        return node;
+    }
 
 }
